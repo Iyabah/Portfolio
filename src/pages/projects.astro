@@ -1,0 +1,58 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { projects } from "../data/projects.js";
+import techStacks from "../data/techStacks.js";
+---
+
+<Layout title="Projects ">
+  <section class="py-5">
+    <div class="container">
+      <h1 class="text-center mb-5 text-white">Projects</h1>
+      <div class="row g-4">
+        {projects.map((project) => (
+          <div class="col-md-6 col-lg-4">
+            <div class="project-card h-100">
+              <img 
+                src={project.imageUrl} 
+                class="img-fluid w-100" 
+                alt={project.title} 
+                style="height: 200px; object-fit: cover;" 
+              />
+              <div class="p-3 d-flex flex-column">
+                <h5 class="text-white">{project.title}</h5>
+                <p class="text-white-50 flex-grow-1">{project.description}</p>
+                <div class="tech-stack-icons mb-3">
+                  {project.techStacks.map((id) => {
+                    const tech = techStacks.find((t) => t.id === id);
+                    return tech ? <img src={tech.iconUrl} alt={tech.name} class="tech-icon-small" /> : null;
+                  })}
+                </div>
+                <div class="d-flex gap-2">
+                  <a 
+                    href={project.liveUrl} 
+                    class="btn btn-success" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                  >
+                    Live Demo
+                  </a>
+                  {project.githubUrl && (
+                    <a 
+                      href={project.githubUrl} 
+                      class="btn btn-outline-light" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                    >
+                      <i class="bi bi-github me-2"></i>
+                      GitHub
+                    </a>
+                  )}
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>

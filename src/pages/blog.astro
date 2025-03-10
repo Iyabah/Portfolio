@@ -1,0 +1,58 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+// You can later move this to a separate data file
+const description = "Learn how I built my portfolio website using Astro, a modern static site generator that delivers lightning-fast performance.";
+const title = "Blog";
+const image = "https://res.cloudinary.com/dcyini9ap/image/upload/v1739803581/fallback-image_luhi5g.jpg";
+const blogPosts = [
+  {
+   // title: "Getting Started with Astro",
+    date: "March 4, 2025",
+    excerpt: "My journey into learning and building with Astro framework...",
+    slug: "getting-started-with-astro",
+    imageUrl: "https://res.cloudinary.com/dcyini9ap/image/upload/v1739803581/fallback-image_luhi5g.jpg"
+  },
+  // Add more blog posts here
+];
+---
+
+<Layout
+  title={title}
+  description={description}
+  image={image}
+>  <section class="py-5">
+    <div class="container">
+      <h1 class="text-center mb-5 text-white">Blog Posts</h1>
+      
+      {blogPosts.length === 0 ? (
+        <div class="text-center text-white-50">
+          <p class="fs-5">No blog posts yet. Check back soon!</p>
+        </div>
+      ) : (
+        <div class="row g-4">
+          {blogPosts.map((post) => (
+            <div class="col-md-6 col-lg-4">
+              <div class="card bg-dark h-100 border-secondary">
+                <img 
+                  src={post.imageUrl} 
+                  class="card-img-top" 
+                  alt={post.title}
+                  style="height: 200px; object-fit: cover;"
+                />
+                <div class="card-body">
+                  <h5 class="card-title text-white">{post.title}</h5>
+                  <p class="text-white-50 small mb-2">{post.date}</p>
+                  <p class="card-text text-white-50">{post.excerpt}</p>
+                  <a href={`/blog/${post.slug}`} class="btn btn-outline-success">
+                    Read More
+                  </a>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,41 @@
+---
+// This is a client-side script component that will run in the browser
+---
+
+<script>
+    // Function to add sliding effect by adding 'active' class to elements with delay
+    function addSlidingEffect() {
+      // Primary heading
+      setTimeout(() => {
+        document.querySelector('.slide-in')?.classList.add('active');
+      }, 300);
+      
+      // Name (secondary heading)
+      setTimeout(() => {
+        document.querySelector('.slide-in-delayed')?.classList.add('active');
+      }, 600);
+      
+      // First paragraph
+      setTimeout(() => {
+        document.querySelector('.slide-in-paragraph')?.classList.add('active');
+      }, 900);
+      
+      // Second paragraph
+      setTimeout(() => {
+        document.querySelector('.slide-in-paragraph-delayed')?.classList.add('active');
+      }, 1200);
+      
+      // Third paragraph
+      setTimeout(() => {
+        document.querySelector('.slide-in-paragraph-more-delayed')?.classList.add('active');
+      }, 1500);
+      
+      // Profile image
+      setTimeout(() => {
+        document.querySelector('.slide-in-image')?.classList.add('active');
+      }, 800);
+    }
+    
+    // Run the animation when the DOM is loaded
+    document.addEventListener('DOMContentLoaded', addSlidingEffect);
+  </script>

@@ -1,0 +1,115 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="Getting Started with Astro - A Developer's Journey">
+  <article class="py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <h1 class="text-white mb-4">My Journey into Learning and Building with Astro Framework </h1>
+          <p class="text-white-50 mb-4">March 4, 2025</p>
+          
+          <img 
+            src="https://res.cloudinary.com/dcyini9ap/image/upload/v1741088695/icons8-astro-64_xukxon.png" 
+            alt="Blog post featured image" 
+            class="img-fluid rounded mb-4"
+          />
+          
+          <div class="text-white-50">
+        
+            <h2 class="text-white mt-4 mb-3"> </h2>
+
+         
+
+            <h3 >Getting Started with Astro </h3>
+              
+            <p> My journey into learning Astro started with curiosity. 
+              I had been using traditional frameworks like React and Next.js for building web applications, 
+              but I wanted something lighter, faster, and optimized for static site generation. 
+              That’s when I stumbled upon Astro a modern framework designed for performance and simplicity. </p>
+              
+              <h3> Why Astro? </h3> 
+              
+               <p> I was drawn to Astro because of its unique features:
+              
+            <b>- Island Architecture</b>: It allows mixing multiple frontend frameworks like React, Vue, and Svelte in the same project.<br>
+            <b>- Zero JS by Default</b>: Unlike other frameworks, Astro ships only the HTML and CSS needed for the page, making it ultra-fast.<br>
+            <b>- SEO-Friendly</b>: Astro provides great built-in support for SEO, making content-rich websites perform well in search rankings.<br>
+            <b>- Easy Deployment</b> With static HTML output, deploying Astro sites is as easy as uploading files to a server. </p>
+              
+             <h3> My First Astro Project </h3>
+              
+              <p> To get hands-on experience, I decided to build a <b>portfolio website</b> using Astro. Here’s how I started: </p>
+              
+              <h4> 1. Setting Up the Project </h4>
+              
+                <p>I installed Astro using the command: </p>
+              
+               <p> <code >npm create astro@latest my-portfolio</code> </p>  
+              
+              
+              <p>This created a minimal project structure with everything I needed to get started. </p>
+              
+              <h4> 2. Understanding the File Structure </h4>
+              
+              <p>Astro's file structure was straightforward:</p>
+
+              <p>
+                `src/pages/` → Where I created my individual pages (`index.astro`, `about.astro`, etc.)<br>
+                `src/components/` → For reusable UI components like headers, footers, and project cards<br>
+                `src/layouts/` → For layout components like headers, footers, and project cards<br>
+                `public/` → For static assets like images, fonts, and icons
+              </p>
+              
+            <h4> 3. Building My Portfolio </h4>
+              
+              <p> Since performance was a key factor, I designed my portfolio with:</p>
+              
+          <p> - A <b>hero section</b> introducing myself.<br>
+              - A <b>tech stack display</b> showcasing the tools I use (linked to Cloudinary-hosted icons).<br>
+              - A <b>featured projects section</b> dynamically pulling projects from a JSON file.<br>
+              - A <b>contact form</b> using an Astro API route for handling submissions.</p>
+              
+             <h4> 4.Styling with Bootstrap</h4> 
+              
+              <p> To add a professional touch, I used Bootstrap for styling. Integrating it was simple:</p>
+              
+              <h3>Hmtl</h3>
+              <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+          
+              
+              <p> I then added responsive grids, cards, and buttons to enhance the design. </p>
+              
+             <h4>Deploying My Astro Site</h4>
+              
+              <p> Once the site was ready, I deployed it using <b>FTP on a traditional hosting platform</b>. The steps were: </p>
+              
+          <p> 1. <b>Build the site</b> with <code> npm run build </code> <br>
+              2. <b>Upload</b> the <code>dist/</code> folder contents to my hosting server.<br>
+              3. <b>Configure DNS settings</b> to point my domain to the hosting provider. </p>
+              
+              <h3> Lessons Learned </h3>
+              
+             <h4> My experience with Astro taught me a lot: </h4>
+              
+       <p>    - <b>Astro is incredibly fast</b> because it only ships necessary code.<br>
+              - <b>It's component-based approach is easy to manage</b> especially for content-heavy sites.<br>
+              - <b>Mixing frameworks is possible but should be done wisely</b> to avoid unnecessary dependencies.</p>
+              
+              <h3> What’s Next? </h3>
+              
+             <p> With my portfolio live, I’m planning to explore <b>Astro’s integrations</b> with CMS platforms like Contentful and try out <b>server-side rendering (SSR)</b> for more dynamic content.</p>
+              
+              <p>If you’re considering Astro, I highly recommend giving it a shot—it’s a game-changer for static and hybrid sites! 🚀 </p>
+              
+                
+              
+            
+            <!-- Add more sections as needed -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+</Layout>

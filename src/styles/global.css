@@ -1,0 +1,138 @@
+/* Profile Image Animation */
+.profile-image-wrapper {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  max-width: 300px;
+ 
+  
+}
+
+.profile-image-wrapper::before {
+  content: '';
+  position: absolute;
+  inset: -10px;
+  border-radius: 60%;
+  background: linear-gradient(45deg, #0d6efd, #198754);
+  animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  filter: blur(15px);
+  opacity: 0.7;
+  z-index: 0;
+}
+
+.profile-image-wrapper:hover::before {
+  border-color: #198754;
+  transform: scale(1.02);
+}
+
+.profile-image {
+  position: relative;
+  border: 3px solid var(--bs-primary);
+  transition: all 0.3s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-image-wrapper:hover .profile-image {
+  border-color: var(--bs-success);
+  transform: scale(1.02);
+}
+
+/* Tech Stack Section */
+.tech-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 1rem;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tech-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.tech-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  filter: brightness(0.9);
+  transition: all 0.3s ease;
+}
+
+.tech-card:hover .tech-icon {
+  filter: brightness(1);
+  transform: scale(1.1);
+}
+
+/* Project Cards */
+.project-card {
+  background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.tech-stack-icons {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tech-icon-small {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}@media (min-width: 992px) {
+  .profile-image-wrapper {
+    max-width: 400px;
+  }
+}
+.btn {
+  background: var(--bs-primary);
+  color: var(--bs-light);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}   
+
+
+/* Base slide-in animation styles */
+.slide-in, .slide-in-delayed, .slide-in-paragraph, .slide-in-paragraph-delayed, .slide-in-paragraph-more-delayed, .slide-in-image {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+/* Image has a different transform for more visual effect */
+.slide-in-image {
+  transform: translateX(40px);
+}
+
+/* Animated classes that will be added on page load */
+.slide-in.active, .slide-in-delayed.active, .slide-in-paragraph.active, .slide-in-paragraph-delayed.active, .slide-in-paragraph-more-delayed.active, .slide-in-image.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slide-in-image.active {
+  transform: translateX(0);
+}
+
+/* Add a subtle scale effect to the profile image */
+.profile-image {
+  transition: transform 0.5s ease;
+}
+
+.profile-image:hover {
+  transform: scale(1.05);
+}
