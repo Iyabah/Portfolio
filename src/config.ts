@@ -11,8 +11,6 @@ export const SITE = {
     'Computer Engineering',
     'Web Development',
     'Backend Developer',
-    'FARM Stack',
-    'PERN Stack',
     'Cameroonian Developer',
     'Software Engineer',
     'Iya Said Bah'

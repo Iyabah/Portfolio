@@ -1,126 +1,75 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import techStacks from "../data/techStacks.js";
-import { projects } from "../data/projects.js";
-import { SITE } from '../config';
-import HeroAnimation from "../components/HeroAnimation.astro";
-
+import '../styles/global.css';
+import Navbar from '../components/Navbar.astro';
 ---
 
-<Layout 
-title={SITE.title}
-description={SITE.description}
->  <!-- Hero Section with Split Layout -->
-  <section class="bg-dark text-white py-5">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-6">
-          <h1 class="display-4 fw-bold " data-aos="fade-down" data-aos-delay="100">
-            Hi, I am 
-            <span class="d-block text-success slide-in-delayed">Iya Said Bah</span>
-          </h1>
-                <div class="mt-4 fs-5 text-white-50">
-                    <p data-aos="fade-down" data-aos-delay="200">  
-                      A senior-year Computer Engineering student specializing in full-stack development 
-                      with a strong focus on backend technologies. My expertise includes working with 
-                      stacks like FARM/P, ASP.NET and Astro. I have professional experience in C# (ASP.NET Core 8), 
-                      PERN stack and basic Bash scripting. Additionally, I have some foundational academic experience in C and Java.
-                      When it comes to databases, SQL is my jam, and I prefer it over NoSQL options.
-                    </p>
-            <p data-aos="fade-up" data-aos-delay="400">
-              I love designing, developing, and deploying apps from start to finish. 
-              Whether it's creating something new or adjusting an existing project, 
-              I'm always up for it! I also do some optimizations on existing projects to make them more efficient.
-            </p>
-            <p data-aos="fade-up" data-aos-delay="600">
-              If it's about creating web solutions and building cool stuff, I'm ready 
-              to jump in and get started! 
-              <a 
-                href="/contact" 
-                class="text-success text-decoration-underline"
-              >
-                Let's create something great together!
-              </a>
-            </p>
-          </div>
-        </div>
-        <div class="col-lg-6 text-center d-lg-block d-none">
-          <div class="position-relative profile-image-wrapper mb-4 mb-lg-0">
-            <img
-              src="https://res.cloudinary.com/dcyini9ap/image/upload/v1739803581/homelogo_oagqid.jpg"
-              alt="iya's private photo"
-              class="rounded-circle profile-image"
-              width="400"
-              height="400"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome</title>
+    <link rel="stylesheet" href="/styles/global.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="https://res.cloudinary.com/dcyini9ap/image/upload/v1739803581/fallback-image_luhi5g.jpg"/>
 
- 	<!-- Tech Stack -->
-	<section class="py-5">
-	  <div class="container">
-		<h2 class="text-center mb-3 text-white display-5">Technology</h2>
-		<h4 class="text-center mb-5 text-white-50 fs-5">
-		  Here are some of the technologies, languages, frameworks and databases I've worked with
-		</h4>
-		<div class="row g-4 justify-content-center">
-		  {techStacks.map((tech) => (
-			<div class="col-6 col-md-3 col-lg-2">
-			  <div class="tech-card text-center">
-				<img src={tech.iconUrl} class="tech-icon mb-2" alt={tech.name} />
-				<p class="mb-0 small text-white-50">{tech.name}</p>
-			  </div>
-			</div>
-		  ))}
-		</div>
-	  </div>
-	</section>
-<!-- Featured Projects -->
-<section class="py-5">
-  <div class="container">
-    <h2 class="text-center mb-4 text-white">Featured Projects</h2>
-    <h4 class="text-center mb-5 text-white-50 fs-5" data-aos="fly-in-up">
-		  Here's a selection of some of the projects I've worked on
-		</h4>
-    <div class="row g-4">
-      {projects.slice(0, 3).map((project) => (
-        <div class="col-md-6 col-lg-4">
-          <div class="project-card h-100">
-            <img src={project.imageUrl} class="img-fluid w-100" alt={project.title} />
-            <div class="p-3">
-              <h5 class="text-white">{project.title}</h5>
-              <p class="text-white-50">{project.description}</p>
-              <div class="tech-stack-icons">
-                {project.techStacks.map((id) => {
-                  const tech = techStacks.find((t) => t.id === id);
-                  return tech ? <img src={tech.iconUrl} alt={tech.name} class="tech-icon-small" /> : null;
-                })}
-              </div>
-            </div>
-          </div>
-        </div>
-      ))}
+</head>
+<body class="bg-dark text-white">
+
+<Navbar/>
+    <div class="container">
+        <div class="row align-items-center">
+
+          <h1 class="display-4 fw-bold " data-aos="fade-down" data-aos-delay="100">
+        Welcome to my <code> Portfolio</code>
+      </h1>
+      <main>
+            <p>
+                I'm currently building another version of my portfolio using NextJs.
+            </p>
+            <p>
+                This version is built using Astro, a static site generator that allows
+                for faster loading times and better SEO.
+            </p>
+            <p>
+                You can check it out here <span class="majesticons--arrow-down-line"></span></p>
+                <p><a href="/home"><span class="majesticons--airplane-line"></span></a></p>
+                <h4>
+                    <button class="btn btn-primary">
+                        <a href="/home" class="text-white text-decoration-none">Home</a>
+                    </button>
+                </h4>
+        </main>       
     </div>
-    <div class="text-center mt-4">
-      <a href="/projects" class="btn btn-outline-success">See More Projects</a>
     </div>
-  </div>
-</section>
-<HeroAnimation />
-<script type="application/ld+json" set:html={JSON.stringify({
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Iya Said Bah",
-  "url": "https://iyabahsaid.com.tr",
-  "image": SITE.image,
-  "sameAs": [
-    SITE.githubUrl,
-    // Add other social profile URLs
-  ],
-  "jobTitle": "Full Stack Developer",
-  "description": SITE.description
-})} />
-</Layout>
+  
+  
+  </section>
+<style>
+    .footer {
+      position: fixed;
+      bottom: 0;
+    }
+   
+ .majesticons--airplane-line {
+  display: inline-block;
+  width: 96px;
+  height: 96px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='%23f6f6f6' stroke-linecap='round' stroke-linejoin='round' stroke-width='2.2' d='M15 9h5.5a2.5 2.5 0 0 1 2.5 2.5v0a2.5 2.5 0 0 1-2.5 2.5h-4.02a1 1 0 0 0-.78.375l-3.4 4.25a1 1 0 0 1-.78.375H9.476a1 1 0 0 1-.928-1.371l.902-2.258A1 1 0 0 0 8.523 14H4.659a1 1 0 0 1-.919-.606l-2.143-5A1 1 0 0 1 2.517 7h1.865a1 1 0 0 1 .894.553l.448.894A1 1 0 0 0 6.618 9H10m5 0l-2.7-3.6a1 1 0 0 0-.8-.4H9.618a1 1 0 0 0-.894 1.447L10 9m5 0h-5'/%3E%3C/svg%3E");
+}
+.majesticons--arrow-down-line {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='%23f6f6f6' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m12 19l6-6m-6 6l-6-6m6 6V5'/%3E%3C/svg%3E");
+}
+.main{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+  </style>

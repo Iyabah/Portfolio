@@ -1,4 +1,9 @@
 const techStacks =[
+  {
+    "id": 20,
+    "name": "NextJs",
+    "iconUrl": "https://images.seeklogo.com/logo-png/39/1/next-js-logo-png_seeklogo-394608.png"
+  },
     {
       "id": 1,
       "name": "HTML",
@@ -85,8 +90,8 @@ const techStacks =[
       },
       {
         "id": 18,
-        "name": "WordPress",
-        "iconUrl": "https://res.cloudinary.com/dcyini9ap/image/upload/v1741112056/icons8-wordpress-50_1_j50yeh.png"
+        "name": "PostgreSQL",
+        "iconUrl": "https://images.seeklogo.com/logo-png/23/1/postgre-sql-logo-png_seeklogo-237087.png"
       },
       {
         "id": 19,

@@ -96,15 +96,30 @@
   }
 }
 .btn {
-  background: var(--bs-primary);
+  background: linear-gradient(45deg, #0d6efd, #198754);
   color: var(--bs-light);
   border: none;
   padding: 0.5rem 1rem;
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
-}   
-
+} 
+   .button{
+        background-color: hsl(134, 28%, 52%);
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+    .button:hover {
+        background-color: hsl(134, 28%, 62%);
+        color: white;
+    }
 
 /* Base slide-in animation styles */
 .slide-in, .slide-in-delayed, .slide-in-paragraph, .slide-in-paragraph-delayed, .slide-in-paragraph-more-delayed, .slide-in-image {

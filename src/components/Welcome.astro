@@ -1,10 +1,25 @@
 ---
+import Navbar from '../components/Navbar.astro';
+---
+<div id="container">
+	<Navbar/>
+		<main> 
+			<h1>
+				Welcome to my  <code></code> directory in your project.
+			</h1>
+
+		</main>
+
+</div>
+
+
+
+
+<!-- ---
 import astroLogo from '../assets/astro.svg';
-import background from '../assets/background.svg';
 ---
 
 <div id="container">
-	<img id="background" src={background.src} alt="" fetchpriority="high" />
 	<main>
 		<section id="hero">
 			<a href="https://astro.build"
@@ -39,7 +54,7 @@ import background from '../assets/background.svg';
 			improvements in Astro 5.0
 		</p>
 	</a>
-</div>
+</div> -->
 
 <style>
 	#background {
@@ -50,6 +65,7 @@ import background from '../assets/background.svg';
 		height: 100%;
 		z-index: -1;
 		filter: blur(100px);
+		background: linear-gradient(14deg, #d83333 0%, #f041ff 100%);
 	}
 
 	#container {

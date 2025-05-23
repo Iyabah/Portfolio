@@ -1,0 +1,125 @@
+---
+import Layout from "../layouts/Layout.astro";
+import techStacks from "../data/techStacks.js";
+import { projects } from "../data/projects.js";
+import { SITE } from '../config';
+import HeroAnimation from "../components/HeroAnimation.astro";
+import Welcome from "../components/Welcome.astro";
+---
+<Layout 
+title={SITE.title}
+description={SITE.description}
+>  <!-- Hero Section with Split Layout -->
+
+  <section class="bg-dark text-white py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h1 class="display-4 fw-bold " data-aos="fade-down" data-aos-delay="100">
+            Hi, I am 
+            <span class="d-block text-success slide-in-delayed">Iya Said Bah</span>
+          </h1>
+                <div class="mt-4 fs-5 text-white-50">
+                    <p data-aos="fade-down" data-aos-delay="200">  
+                      A senior-year Computer Engineering student specializing in full-stack development 
+                      with a strong focus on backend technologies. My expertise includes working with 
+                      stacks like NextJs, React, and Astro. Additionally, I have some foundational academic experience in C and Java.
+                      When it comes to databases, PostgreSQL is my jam..
+                    </p>
+            <p data-aos="fade-up" data-aos-delay="400">
+              I love designing, developing, and deploying apps from start to finish. 
+              Whether it's creating something new or adjusting an existing project, 
+              I'm always up for it! I also do some optimizations on existing projects to make them more efficient.
+            </p>
+            <p data-aos="fade-up" data-aos-delay="600">
+              If it's about creating web solutions and building cool stuff, I'm ready 
+              to jump in and get started! 
+              <a 
+                href="/contact" 
+                class="text-success text-decoration-underline"
+              >
+                Let's create something great together!
+              </a>
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-6 text-center d-lg-block d-none">
+          <div class="position-relative profile-image-wrapper mb-4 mb-lg-0">
+            <img
+              src="https://res.cloudinary.com/dcyini9ap/image/upload/v1739803581/homelogo_oagqid.jpg"
+              alt="iya's private photo"
+              class="rounded-circle profile-image"
+              width="400"
+              height="400"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ 	<!-- Tech Stack -->
+	<section class="py-5">
+	  <div class="container">
+		<h2 class="text-center mb-3 text-white display-5">Technology</h2>
+		<h4 class="text-center mb-5 text-white-50 fs-5">
+		  Here are some of the technologies, languages, frameworks and databases I've worked with
+		</h4>
+		<div class="row g-4 justify-content-center">
+		  {techStacks.map((tech) => (
+			<div class="col-6 col-md-3 col-lg-2">
+			  <div class="tech-card text-center">
+				<img src={tech.iconUrl} class="tech-icon mb-2" alt={tech.name} />
+				<p class="mb-0 small text-white-50">{tech.name}</p>
+			  </div>
+			</div>
+		  ))}
+		</div>
+	  </div>
+	</section>
+<!-- Featured Projects -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4 text-white">Featured Projects</h2>
+    <h4 class="text-center mb-5 text-white-50 fs-5" data-aos="fly-in-up">
+		  Here's a selection of some of the projects I've worked on
+		</h4>
+    <div class="row g-4">
+      {projects.slice(0, 3).map((project) => (
+        <div class="col-md-6 col-lg-4">
+          <div class="project-card h-100">
+            <img src={project.imageUrl} class="img-fluid w-100" alt={project.title} />
+            <div class="p-3">
+              <h5 class="text-white">{project.title}</h5>
+              <p class="text-white-50">{project.description}</p>
+              <div class="tech-stack-icons">
+                {project.techStacks.map((id) => {
+                  const tech = techStacks.find((t) => t.id === id);
+                  return tech ? <img src={tech.iconUrl} alt={tech.name} class="tech-icon-small" /> : null;
+                })}
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+    <div class="text-center mt-4">
+      <a href="/projects" class="btn btn-outline-success">See More Projects</a>
+    </div>
+  </div>
+</section>
+<HeroAnimation />
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Iya Said Bah",
+  "url": "https://iyabahsaid.com.tr",
+  "image": SITE.image,
+  "sameAs": [
+    SITE.githubUrl,
+    // Add other social profile URLs
+  ],
+  "jobTitle": "Full Stack Developer",
+  "description": SITE.description
+})} />
+</Layout>
