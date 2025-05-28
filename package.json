@@ -15,7 +15,6 @@
     "astro": "^5.7.14",
     "astro-icon": "^1.1.5",
     "bootstrap": "^5.3.3",
-    "lint": "^0.8.19",
     "typescript": "^5.8.3"
   }
 }

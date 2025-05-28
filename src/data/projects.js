@@ -1,13 +1,12 @@
-
-    const projects = [ 
+const projects = [ 
         {
       "id": 1,
-      "title": "Portofolio Website",
-      "description": "My portfolio website to show off my skills, projects, experience and to take control of my CSSphobia..",
-      "imageUrl": "https://res.cloudinary.com/dcyini9ap/image/upload/v1741086347/imgPort_dmxuqq.jpg",
-      "techStacks": [1, 2, 3,13],
-       "liveUrl" : "https://iyabahsaid.com.tr/",
-      //"githubUrl": "https://github.com/username/project"
+      "title": "Portfolio Website",
+      "description": "A modern, responsive personal portfolio website built with Astro and Bootstrap. It showcases my skills, projects, and experience, and features smooth animations, a contact form, and optimized performance. Designed to provide a fast, accessible, and visually appealing way for visitors to learn more about me and get in touch.",
+      "imageUrl": "https://res.cloudinary.com/dcyini9ap/image/upload/v1748448353/portf_prd4jc.jpg",
+      "techStacks": [1, 2, 3,13, 17,5],
+       "liveUrl" : "https://iyabahsaid.site/",
+      "githubUrl": "https://github.com/Iyabah/Portfolio"
     },
     {
       "id": 2,
@@ -48,4 +47,3 @@
     }
   ] 
   export { projects };
-  

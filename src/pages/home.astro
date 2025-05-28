@@ -14,10 +14,10 @@ description={SITE.description}
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-6">
-          <h1 class="display-4 fw-bold " data-aos="fade-down" data-aos-delay="100">
+          <!-- <h1 class="display-4 fw-bold " data-aos="fade-down" data-aos-delay="100">
             Hi, I am 
             <span class="d-block text-success slide-in-delayed">Iya Said Bah</span>
-          </h1>
+           </h1> 
                 <div class="mt-4 fs-5 text-white-50">
                     <p data-aos="fade-down" data-aos-delay="200">  
                       A senior-year Computer Engineering student specializing in full-stack development 
@@ -38,7 +38,26 @@ description={SITE.description}
                 class="text-success text-decoration-underline"
               >
                 Let's create something great together!
-              </a>
+              </a> -->
+            <h1 class="display-4 fw-bold" data-aos="fade-down" data-aos-delay="100">
+  Hi, I'm 
+  <span class="d-block text-success slide-in-delayed">Iya Said Bah</span>
+</h1>
+<div class="mt-4 fs-5 text-white-50">
+  <p data-aos="fade-down" data-aos-delay="200">
+    I'm a final-year Computer Engineering student passionate about building robust and scalable web applications. My main focus is full-stack development, with a strong interest in backend technologies and cloud solutions.
+  </p>
+  <p data-aos="fade-up" data-aos-delay="400">
+    I have hands-on experience with modern frameworks like Next.js, React, and Astro, and a solid foundation in C and Java from my academic journey. PostgreSQL is my go-to database, and I enjoy optimizing data flows and application performance.
+  </p>
+  <p data-aos="fade-up" data-aos-delay="600">
+    I love turning ideas into real products—whether it's designing, developing, or deploying. I'm always eager to learn, collaborate, and take on new challenges. If you're looking to create impactful web solutions or improve existing ones,
+    <a 
+      href="/contact" 
+      class="text-success text-decoration-underline"
+    >
+      let's connect and build something great together!
+    </a>
             </p>
           </div>
         </div>
@@ -96,6 +115,28 @@ description={SITE.description}
                   const tech = techStacks.find((t) => t.id === id);
                   return tech ? <img src={tech.iconUrl} alt={tech.name} class="tech-icon-small" /> : null;
                 })}
+                <hr/>
+                <div class="d-flex gap-2">
+                  <a 
+                    href={project.liveUrl} 
+                    class="btn btn-success" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                  >
+                    Live Demo
+                  </a>
+                  {project.githubUrl && (
+                    <a 
+                      href={project.githubUrl} 
+                      class="btn btn-outline-light" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                    >
+                      <i class="bi bi-github me-2"></i>
+                      GitHub
+                    </a>
+                  )}
+                </div>
               </div>
             </div>
           </div>
@@ -112,7 +153,7 @@ description={SITE.description}
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Iya Said Bah",
-  "url": "https://iyabahsaid.com.tr",
+  "url": "https://iyabahsaid.site",
   "image": SITE.image,
   "sameAs": [
     SITE.githubUrl,

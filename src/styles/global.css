@@ -96,7 +96,7 @@
   }
 }
 .btn {
-  background: linear-gradient(45deg, #0d6efd, #198754);
+  background: linear-gradient(45deg, #3a475b, #222522);
   color: var(--bs-light);
   border: none;
   padding: 0.5rem 1rem;
