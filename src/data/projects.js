@@ -41,10 +41,10 @@
       "id": 5,
       "title": "Camturk",
       "description": "Contributed to the improvement and modernization of Camturk's website. Made significant updates to enhance user experience, improve performance, and update content while maintaining the site's core functionality. Implemented responsive design improvements and technical optimizations.",
-      "imageUrl": "https://res.cloudinary.com/dcyini9ap/image/upload/v1741210443/cturk_nqik0l.jpg",
+      "imageUrl": "https://res.cloudinary.com/dcyini9ap/image/upload/v1748443990/cturk_mocgny.jpg",
       "techStacks": [6,2,3,7,19],
        "liveUrl" : "https://camturk.org/",
-      //"githubUrl": "https://github.com/username/project"
+      //"githubUrl": " "
     }
   ] 
   export { projects };

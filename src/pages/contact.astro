@@ -6,11 +6,22 @@ import Layout from "../layouts/Layout.astro";
   <section class="py-5">
     <div class="container">
       <h1 class="text-center mb-5 text-white">Get In Touch</h1>
+      <p class="text-center text-white mb-4">
+        If you have any questions, feedback, or just want to say hello, feel free to reach out  through my socials or using the form below.
+      </p><br/>
       <div class="row justify-content-center">
         <div class="col-md-8 col-lg-6">
           <div class="card bg-dark border-secondary">
-            <div class="card-body">
-              <form action="https://formspree.io/f/xpwqvnjd" method="POST">
+            <div class="responsive-iframe">
+              <iframe
+                src="https://docs.google.com/forms/d/e/1FAIpQLSdKjlXNzkSvyviSJ7EfPTj8xA9jlEFt6_zpmJoqr7ohYb-rsw/viewform?embedded=true"
+                width="640"
+                height="850"
+                frameborder="0"
+                marginheight="0"
+                marginwidth="0">Loading…</iframe
+              >
+              <!-- <form action="https://formspree.io/f/xpwqvnjd" method="POST">
                 <div class="mb-3">
                   <label for="name" class="form-label text-white">Name</label>
                   <input type="text" name="name" class="form-control bg-dark text-white border-secondary" id="name" required>
@@ -24,7 +35,7 @@ import Layout from "../layouts/Layout.astro";
                   <textarea name="message" class="form-control bg-dark text-white border-secondary" id="message" rows="5" required></textarea>
                 </div>
                 <button type="submit" class="btn btn-success w-100">Send Message</button>
-              </form>
+              </form> -->
             </div>
           </div>
         </div>

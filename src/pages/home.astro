@@ -4,7 +4,6 @@ import techStacks from "../data/techStacks.js";
 import { projects } from "../data/projects.js";
 import { SITE } from '../config';
 import HeroAnimation from "../components/HeroAnimation.astro";
-import Welcome from "../components/Welcome.astro";
 ---
 <Layout 
 title={SITE.title}
@@ -82,7 +81,7 @@ description={SITE.description}
   <div class="container">
     <h2 class="text-center mb-4 text-white">Featured Projects</h2>
     <h4 class="text-center mb-5 text-white-50 fs-5" data-aos="fly-in-up">
-		  Here's a selection of some of the projects I've worked on
+		  Here's a selection of some projects I've worked on
 		</h4>
     <div class="row g-4">
       {projects.slice(0, 3).map((project) => (
