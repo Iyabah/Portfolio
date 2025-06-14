@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import techStacks from "../data/techStacks.js";
-import { projects } from "../data/projects.js";
+import projects from "@/data/projects";
 import { SITE } from '../config';
 import HeroAnimation from "../components/HeroAnimation.astro";
 ---
@@ -149,7 +149,7 @@ description={SITE.description}
   </div>
 </section>
 <HeroAnimation />
-<script type="application/ld+json" set:html={JSON.stringify({
+<script is:inline type="application/ld+json" set:html={JSON.stringify({
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Iya Said Bah",

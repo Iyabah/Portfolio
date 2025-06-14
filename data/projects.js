@@ -14,7 +14,7 @@ const projects = [
       "description": "A computer-based platform that allows online assessments. It reduces the need for physical question papers, answer scripts, and exam room logistics. These systems are used for conducting e-exams, evaluating academic performance, and selecting candidates for various roles",
       "imageUrl": "https://res.cloudinary.com/dcyini9ap/image/upload/v1741113044/Students_Dashboard.2png_xpniqr.png",
       "techStacks": [1, 2, 3, 7, 19],
-      "liveUrl" : null,
+      // "liveUrl" : " ",
       "githubUrl": "https://github.com/Iyabah/Web-based-examination-system.git"
     },
     {
@@ -23,8 +23,8 @@ const projects = [
       "description": "In Progress",
       "imageUrl": "https://res.cloudinary.com/dcyini9ap/image/upload/v1739803404/cld-sample.jpg",
       "techStacks": [],
-      "liveUrl" : null,
-      "githubUrl": null
+      // "liveUrl" : "https://project-demo-url.com",
+      //"githubUrl": "https://github.com/username/project"
     },
     {
       "id": 4,
@@ -32,7 +32,7 @@ const projects = [
       "description": "This is a full-stack blog application built with React (Frontend) and Node.js with MySQL (Backend). It allows users to view, create, and manage blog posts..",
       "imageUrl": "https://res.cloudinary.com/dcyini9ap/image/upload/v1741113201/img_omhpur.jpg",
       "techStacks": [4, 14, 19, 17],
-       "liveUrl" : null,
+       //"liveUrl" : "https://project-demo-url.com",
       "githubUrl": "https://github.com/Iyabah/blog-siteV1.git"
     },
     
@@ -43,7 +43,7 @@ const projects = [
       "imageUrl": "https://res.cloudinary.com/dcyini9ap/image/upload/v1748443990/cturk_mocgny.jpg",
       "techStacks": [6,2,3,7,19],
        "liveUrl" : "https://camturk.org/",
-      "githubUrl": null
+      //"githubUrl": " "
     }
   ] 
-  export default projects;
+  export { projects };
