@@ -1,7 +1,7 @@
 {
   "name": "iya",
   "type": "module",
-  "version": "1.0.4",
+  "version": "2.0.0",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
@@ -12,10 +12,10 @@
   "dependencies": {
     "@astrojs/check": "^0.9.4",
     "@astrojs/sitemap": "^3.2.1",
+    "@astrojs/vercel": "^8.1.5",
     "astro": "^5.7.14",
     "astro-icon": "^1.1.5",
     "bootstrap": "^5.3.3",
-  
     "typescript": "^5.8.3"
   }
 }
